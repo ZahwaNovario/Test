@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#182820" />
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23182820'/%3E%3Ctext x='32' y='47' text-anchor='middle' font-size='46' fill='%23e3c77a'%3E%E2%9C%A6%3C/text%3E%3C/svg%3E" />
+  <title>Hearthvale — A living realm</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Spectral:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="rail">
+      <a class="brand-mark" href="#home" aria-label="Hearthvale home"><span class="brand-icon">✦</span></a>
+      <div class="rail-divider"></div>
+      <nav class="rail-nav" aria-label="Main navigation">
+        <button class="rail-link active" data-view="home" title="Realm"><span>⌂</span><small>Realm</small></button>
+        <button class="rail-link" data-view="guild" title="Guild"><span>⚒</span><small>Guild</small></button>
+        <button class="rail-link" data-view="city" title="City hall"><span>♜</span><small>City</small></button>
+        <button class="rail-link" data-view="journal" title="Journal"><span>▤</span><small>Journal</small></button>
+      </nav>
+      <div class="rail-bottom">
+        <div class="online-dot" title="Realm online"></div>
+        <button class="rail-link" data-action="profile" title="Character settings"><span>⚙</span><small>Profile</small></button>
+      </div>
+    </aside>
+    <main class="main-area">
+      <header class="topbar">
+        <div class="realm-label"><span class="tiny-crest">✦</span><span>THE FREE REALMS</span><i></i><span class="season-label">SEASON OF EMBERS</span></div>
+        <div class="top-actions">
+          <div class="server-status"><span class="status-pulse"></span> Realm alive <b>·</b> <span id="online-count">128</span> adventurers</div>
+          <button class="icon-button" id="notifications" aria-label="Notifications">♧<span class="notification-dot"></span></button>
+          <button class="user-chip" data-action="profile"><span class="user-avatar" id="top-avatar">M</span><span id="top-name">Mira</span><span class="chevron">⌄</span></button>
+        </div>
+      </header>
+      <div id="view-root" class="view-root"></div>
+      <footer class="site-footer"><span>✦</span> A shared story, written together <span class="footer-sep">·</span> Hearthvale <span class="footer-version">v0.9.4</span></footer>
+    </main>
+  </div>
+  <div class="toast-stack" id="toasts" aria-live="polite"></div>
+  <div class="modal-layer" id="modal-layer" hidden></div>
+  <script src="game.js"></script>
+</body>
+</html>
